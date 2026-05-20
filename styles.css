@@ -8,12 +8,13 @@
 }
 
 :root {
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --text-dark: #2d3436;
-    --text-light: #636e72;
-    --bg-light: #f8f9fa;
-    --border-color: #dfe6e9;
+    --primary-color: #dc143c;
+    --secondary-color: #000;
+    --text-dark: #000;
+    --text-light: #333;
+    --bg-light: #f5f5f5;
+    --bg-white: #fff;
+    --border-color: #e0e0e0;
     --transition: all 0.3s ease;
 }
 
@@ -24,7 +25,7 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-dark);
-    background-color: #fff;
+    background-color: var(--bg-white);
     line-height: 1.6;
 }
 
@@ -40,8 +41,8 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--bg-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     z-index: 100;
     transition: var(--transition);
 }
@@ -56,10 +57,7 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-color);
 }
 
 .nav-menu {
@@ -101,11 +99,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
+    background: var(--bg-white);
+    color: var(--text-dark);
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .hero::before {
@@ -115,7 +114,7 @@ body {
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: moveBackground 20s linear infinite;
 }
@@ -139,30 +138,35 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
+    color: var(--text-dark);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.7;
     animation: fadeInUp 1s ease 0.2s both;
+    color: var(--text-light);
 }
 
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
-    background-color: white;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 0;
     font-weight: 600;
     transition: var(--transition);
     animation: fadeInUp 1s ease 0.4s both;
+    border: 2px solid var(--primary-color);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: var(--bg-white);
+    color: var(--primary-color);
 }
 
 @keyframes fadeInUp {
@@ -181,7 +185,8 @@ body {
    ====================== */
 .about {
     padding: 80px 0;
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
+    border-top: 1px solid var(--border-color);
 }
 
 .section-title {
@@ -189,6 +194,7 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--text-dark);
+    font-weight: 700;
 }
 
 .about-content {
@@ -212,26 +218,26 @@ body {
 }
 
 .stat-item {
-    background: white;
+    background: var(--bg-light);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
+    border: 1px solid var(--border-color);
     transition: var(--transition);
 }
 
 .stat-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
 }
 
 .stat-item h3 {
     font-size: 2.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 .stat-item p {
@@ -243,7 +249,7 @@ body {
    ====================== */
 .content {
     padding: 80px 0;
-    background-color: white;
+    background-color: var(--bg-light);
 }
 
 .category-filter {
@@ -256,9 +262,9 @@ body {
 
 .filter-btn {
     padding: 10px 25px;
-    border: 2px solid var(--border-color);
-    background-color: white;
-    border-radius: 25px;
+    border: 2px solid var(--text-dark);
+    background-color: transparent;
+    border-radius: 0;
     cursor: pointer;
     font-weight: 500;
     transition: var(--transition);
@@ -267,9 +273,9 @@ body {
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-color: var(--primary-color);
     color: white;
-    border-color: transparent;
+    border-color: var(--primary-color);
 }
 
 .content-grid {
@@ -280,11 +286,12 @@ body {
 
 .content-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
     opacity: 1;
+    border: 1px solid var(--border-color);
 }
 
 .content-card.hidden {
@@ -295,6 +302,7 @@ body {
 .content-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .card-image {
@@ -303,13 +311,14 @@ body {
     display: flex;
     align-items: flex-end;
     padding: 1rem;
+    background-color: var(--bg-light);
 }
 
 .category-tag {
-    background: rgba(255, 255, 255, 0.9);
-    color: var(--text-dark);
+    background: var(--primary-color);
+    color: white;
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 0;
     font-size: 0.85rem;
     font-weight: 600;
 }
@@ -322,10 +331,11 @@ body {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
+    font-weight: 700;
 }
 
 .rating {
-    color: #f39c12;
+    color: var(--primary-color);
     font-size: 1rem;
     margin-bottom: 0.75rem;
 }
@@ -341,7 +351,7 @@ body {
    ====================== */
 .contact {
     padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--text-dark);
     color: white;
 }
 
@@ -353,7 +363,7 @@ body {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 3rem;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 .contact-methods {
@@ -368,15 +378,15 @@ body {
     color: white;
     text-decoration: none;
     padding: 2rem;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: transparent;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 2px solid white;
 }
 
 .contact-method:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     transform: translateY(-5px);
 }
 
@@ -400,25 +410,32 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 15px;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0;
     font-size: 1rem;
     font-family: inherit;
     background: rgba(255, 255, 255, 0.95);
+    color: var(--text-dark);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #999;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.2);
 }
 
 .submit-btn {
     padding: 15px;
-    background: white;
-    color: var(--primary-color);
-    border: none;
-    border-radius: 8px;
+    background: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -428,13 +445,15 @@ body {
 .submit-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: var(--primary-color);
 }
 
 /* ======================
    Footer
    ====================== */
 .footer {
-    background-color: #2d3436;
+    background-color: var(--text-dark);
     color: white;
     text-align: center;
     padding: 2rem 0;
