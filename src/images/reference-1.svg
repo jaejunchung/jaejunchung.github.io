@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Reference placeholder 1">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#D7085A"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g1)"/>
+  <circle cx="150" cy="150" r="120" fill="#EDD70E" fill-opacity="0.75"/>
+  <circle cx="980" cy="620" r="180" fill="#EDD70E" fill-opacity="0.15"/>
+  <rect x="680" y="120" width="420" height="80" rx="0" fill="#EDD70E" fill-opacity="0.85"/>
+  <text x="70" y="720" fill="#EDD70E" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700">REFERENCE 01</text>
+</svg>

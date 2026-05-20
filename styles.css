@@ -464,6 +464,14 @@ body {
     border-radius: 0;
 }
 
+/* placeholder images from src/images */
+.ref-list .ref-item:nth-child(1) .ref-image { background-image: url('src/images/reference-1.svg'); }
+.ref-list .ref-item:nth-child(2) .ref-image { background-image: url('src/images/reference-2.svg'); }
+.ref-list .ref-item:nth-child(3) .ref-image { background-image: url('src/images/reference-3.svg'); }
+.ref-list .ref-item:nth-child(4) .ref-image { background-image: url('src/images/reference-4.svg'); }
+.ref-list .ref-item:nth-child(5) .ref-image { background-image: url('src/images/reference-5.svg'); }
+.ref-list .ref-item:nth-child(6) .ref-image { background-image: url('src/images/reference-6.svg'); }
+
 /* ======================
    Contact Section
    ====================== */
