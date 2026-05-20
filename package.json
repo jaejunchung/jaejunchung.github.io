@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "콘텐츠를 사랑하는 크리에이터 포트폴리오 웹사이트",
   "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=8080 --open=./",
+    "start": "live-server --port=8080 --open=./"
+  },
   "keywords": [
     "portfolio",
     "content-creator",
@@ -13,11 +17,7 @@
   ],
   "author": "Jae Jun Chung",
   "license": "MIT",
-  "scripts": {
-    "dev": "live-server --port=8080 --open=./index.html --watch=.",
-    "start": "live-server --port=8080 --open=./index.html --watch=."
-  },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.1"
   }
 }
