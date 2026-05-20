@@ -8,13 +8,14 @@
 }
 
 :root {
-    --primary-color: #dc143c;
-    --secondary-color: #000;
-    --text-dark: #000;
-    --text-light: #333;
-    --bg-light: #f5f5f5;
-    --bg-white: #fff;
-    --border-color: #e0e0e0;
+    --primary-color: #D7085A;
+    --accent-color: #EDD70E;
+    --text-dark: #EDD70E;
+    --text-light: #FFE680;
+    --bg-dark: #1a1a1a;
+    --bg-light: #2d2d2d;
+    --bg-white: #000;
+    --border-color: #D7085A;
     --transition: all 0.3s ease;
 }
 
@@ -27,6 +28,7 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-white);
     line-height: 1.6;
+    background: linear-gradient(135deg, #1a0a15 0%, #000 100%);
 }
 
 .container {
@@ -41,10 +43,11 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    background: var(--bg-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 10px rgba(215, 8, 90, 0.3);
     z-index: 100;
     transition: var(--transition);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .navbar .container {
@@ -57,7 +60,8 @@ body {
 .nav-brand {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(237, 215, 14, 0.3);
 }
 
 .nav-menu {
@@ -74,7 +78,8 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--primary-color);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(237, 215, 14, 0.5);
 }
 
 .hamburger {
@@ -99,7 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-white);
+    background: linear-gradient(135deg, rgba(215, 8, 90, 0.15) 0%, rgba(0, 0, 0, 0.95) 100%);
     color: var(--text-dark);
     text-align: center;
     position: relative;
@@ -138,35 +143,37 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     animation: fadeInUp 1s ease;
-    color: var(--text-dark);
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(237, 215, 14, 0.4), 0 0 40px rgba(215, 8, 90, 0.3);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    opacity: 0.7;
+    opacity: 0.9;
     animation: fadeInUp 1s ease 0.2s both;
-    color: var(--text-light);
+    color: var(--accent-color);
 }
 
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     text-decoration: none;
     border-radius: 0;
     font-weight: 600;
     transition: var(--transition);
     animation: fadeInUp 1s ease 0.4s both;
     border: 2px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(215, 8, 90, 0.5);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    background-color: var(--bg-white);
-    color: var(--primary-color);
+    box-shadow: 0 0 30px rgba(215, 8, 90, 0.8), 0 0 60px rgba(237, 215, 14, 0.3);
+    background-color: transparent;
+    color: var(--accent-color);
 }
 
 @keyframes fadeInUp {
@@ -185,16 +192,17 @@ body {
    ====================== */
 .about {
     padding: 80px 0;
-    background-color: var(--bg-white);
-    border-top: 1px solid var(--border-color);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(45, 45, 45, 0.5) 100%);
+    border-top: 2px solid var(--primary-color);
 }
 
 .section-title {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--text-dark);
+    color: var(--accent-color);
     font-weight: 700;
+    text-shadow: 0 0 15px rgba(237, 215, 14, 0.3);
 }
 
 .about-content {
@@ -206,7 +214,7 @@ body {
 
 .about-text p {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
@@ -218,30 +226,31 @@ body {
 }
 
 .stat-item {
-    background: var(--bg-light);
+    background: rgba(45, 45, 45, 0.6);
     padding: 2rem;
     border-radius: 0;
     text-align: center;
     box-shadow: none;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--primary-color);
     transition: var(--transition);
 }
 
 .stat-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(215, 8, 90, 0.6);
+    border-color: var(--accent-color);
 }
 
 .stat-item h3 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     margin-bottom: 0.5rem;
     font-weight: 700;
+    text-shadow: 0 0 10px rgba(237, 215, 14, 0.3);
 }
 
 .stat-item p {
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 /* ======================
@@ -249,7 +258,7 @@ body {
    ====================== */
 .content {
     padding: 80px 0;
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(45, 45, 45, 0.4) 100%);
 }
 
 .category-filter {
@@ -262,20 +271,21 @@ body {
 
 .filter-btn {
     padding: 10px 25px;
-    border: 2px solid var(--text-dark);
+    border: 2px solid var(--primary-color);
     background-color: transparent;
     border-radius: 0;
     cursor: pointer;
     font-weight: 500;
     transition: var(--transition);
-    color: var(--text-dark);
+    color: var(--accent-color);
 }
 
 .filter-btn:hover,
 .filter-btn.active {
     background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(215, 8, 90, 0.6);
 }
 
 .content-grid {
@@ -285,13 +295,13 @@ body {
 }
 
 .content-card {
-    background: white;
+    background: rgba(45, 45, 45, 0.7);
     border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 10px rgba(215, 8, 90, 0.2);
     transition: var(--transition);
     opacity: 1;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--primary-color);
 }
 
 .content-card.hidden {
@@ -301,8 +311,8 @@ body {
 
 .content-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
+    box-shadow: 0 0 30px rgba(215, 8, 90, 0.7);
+    border-color: var(--accent-color);
 }
 
 .card-image {
@@ -311,16 +321,17 @@ body {
     display: flex;
     align-items: flex-end;
     padding: 1rem;
-    background-color: var(--bg-light);
+    background: linear-gradient(135deg, rgba(215, 8, 90, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .category-tag {
     background: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     padding: 5px 15px;
     border-radius: 0;
     font-size: 0.85rem;
     font-weight: 600;
+    text-shadow: 0 0 5px rgba(237, 215, 14, 0.3);
 }
 
 .card-content {
@@ -330,18 +341,18 @@ body {
 .card-content h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    color: var(--accent-color);
     font-weight: 700;
 }
 
 .rating {
-    color: var(--primary-color);
+    color: #FFB800;
     font-size: 1rem;
     margin-bottom: 0.75rem;
 }
 
 .card-content p {
-    color: var(--text-light);
+    color: var(--text-dark);
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -351,19 +362,21 @@ body {
    ====================== */
 .contact {
     padding: 80px 0;
-    background: var(--text-dark);
-    color: white;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.98) 0%, rgba(215, 8, 90, 0.1) 100%);
+    color: var(--accent-color);
+    border-top: 2px solid var(--primary-color);
 }
 
 .contact .section-title {
-    color: white;
+    color: var(--accent-color);
 }
 
 .contact-subtitle {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 3rem;
-    opacity: 0.85;
+    opacity: 0.95;
+    color: var(--accent-color);
 }
 
 .contact-methods {
@@ -375,19 +388,20 @@ body {
 
 .contact-method {
     text-align: center;
-    color: white;
+    color: var(--accent-color);
     text-decoration: none;
     padding: 2rem;
     border-radius: 0;
     background: transparent;
     transition: var(--transition);
-    border: 2px solid white;
+    border: 2px solid var(--primary-color);
 }
 
 .contact-method:hover {
     background: var(--primary-color);
-    border-color: var(--primary-color);
+    border-color: var(--accent-color);
     transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(215, 8, 90, 0.6);
 }
 
 .contact-icon {
@@ -410,53 +424,55 @@ body {
 .contact-form input,
 .contact-form textarea {
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--primary-color);
     border-radius: 0;
     font-size: 1rem;
     font-family: inherit;
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--text-dark);
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--accent-color);
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #999;
+    color: rgba(237, 215, 14, 0.5);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.2);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(237, 215, 14, 0.2);
 }
 
 .submit-btn {
     padding: 15px;
     background: var(--primary-color);
-    color: white;
+    color: var(--accent-color);
     border: 2px solid var(--primary-color);
     border-radius: 0;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: 0 0 15px rgba(215, 8, 90, 0.5);
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background: white;
-    color: var(--primary-color);
+    box-shadow: 0 0 30px rgba(215, 8, 90, 0.8), 0 0 15px rgba(237, 215, 14, 0.4);
+    background: transparent;
+    color: var(--accent-color);
 }
 
 /* ======================
    Footer
    ====================== */
 .footer {
-    background-color: var(--text-dark);
-    color: white;
+    background-color: #000;
+    color: var(--accent-color);
     text-align: center;
     padding: 2rem 0;
+    border-top: 2px solid var(--primary-color);
 }
 
 /* ======================
