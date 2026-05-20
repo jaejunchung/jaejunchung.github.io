@@ -1,0 +1,23 @@
+{
+  "name": "jaejunchung-portfolio",
+  "version": "1.0.0",
+  "description": "콘텐츠를 사랑하는 크리에이터 포트폴리오 웹사이트",
+  "main": "index.html",
+  "scripts": {
+    "dev": "http-server -p 8080 -c-1 -o",
+    "start": "http-server -p 8080"
+  },
+  "keywords": [
+    "portfolio",
+    "content-creator",
+    "movies",
+    "dramas",
+    "books",
+    "exhibitions"
+  ],
+  "author": "Jae Jun Chung",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

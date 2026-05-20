@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jae Jun Chung - Content Creator Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">JC</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">홈</a></li>
+                <li><a href="#about" class="nav-link">소개</a></li>
+                <li><a href="#content" class="nav-link">컨텐츠</a></li>
+                <li><a href="#contact" class="nav-link">연락처</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">콘텐츠를 사랑하는 크리에이터</h1>
+            <p class="hero-subtitle">영화, 드라마, 책, 전시를 통해 영감을 나누고 있습니다</p>
+            <a href="#content" class="cta-button">포트폴리오 보기</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">안녕하세요</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>저는 다양한 문화 콘텐츠를 통해 일상의 영감을 찾는 크리에이터입니다. 영화의 감성, 드라마의 스토리, 책의 깊이, 전시의 미학을 경험하며 그 감정들을 나누고 싶습니다.</p>
+                    <p>각각의 매체가 가진 고유한 매력을 탐구하고, 그것들이 우리에게 주는 의미를 함께 생각해봅니다.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>영화 리뷰</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>30+</h3>
+                        <p>드라마 분석</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>40+</h3>
+                        <p>도서 추천</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>전시 리뷰</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Categories -->
+    <section id="content" class="content">
+        <div class="container">
+            <h2 class="section-title">콘텐츠 카테고리</h2>
+            
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="movie">영화</button>
+                <button class="filter-btn" data-filter="drama">드라마</button>
+                <button class="filter-btn" data-filter="book">책</button>
+                <button class="filter-btn" data-filter="exhibition">전시</button>
+            </div>
+
+            <div class="content-grid">
+                <!-- Movie -->
+                <div class="content-card" data-category="movie">
+                    <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span class="category-tag">영화</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>인셉션 (Inception)</h3>
+                        <p class="rating">★★★★★</p>
+                        <p>꿈속의 또 다른 꿈, 현실과 꿈의 경계를 탐험하는 마스터피스. 크리스토퍼 놀란의 시각적 신선함과 아이디어의 스케일이 정말 대단합니다.</p>
+                    </div>
+                </div>
+
+                <!-- Drama -->
+                <div class="content-card" data-category="drama">
+                    <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span class="category-tag">드라마</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>미나리 (Minari)</h3>
+                        <p class="rating">★★★★★</p>
+                        <p>미국의 꿈을 향한 한 가족의 이야기. 따뜻함과 현실의 간극 속에서 우리가 느껴야 할 감정들이 차근차근 쌓여갑니다.</p>
+                    </div>
+                </div>
+
+                <!-- Book -->
+                <div class="content-card" data-category="book">
+                    <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span class="category-tag">책</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>82년생 김지영</h3>
+                        <p class="rating">★★★★☆</p>
+                        <p>일상 속 차별과 불합리함을 담담하게 풀어낸 책. 많은 사람들의 공감을 얻는 작품입니다.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibition -->
+                <div class="content-card" data-category="exhibition">
+                    <div class="card-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <span class="category-tag">전시</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>빛의 미술관</h3>
+                        <p class="rating">★★★★★</p>
+                        <p>색채와 빛으로 표현된 감정들. 공간을 가득 채운 설치 미술은 관객을 다른 세상으로 이끕니다.</p>
+                    </div>
+                </div>
+
+                <!-- Movie -->
+                <div class="content-card" data-category="movie">
+                    <div class="card-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <span class="category-tag">영화</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>라라랜드 (La La Land)</h3>
+                        <p class="rating">★★★★☆</p>
+                        <p>꿈과 현실, 사랑과 야망 사이의 갈등을 아름다운 뮤지컬로 표현. 무언가를 포기해야 한다는 현실이 마음을 아프게 합니다.</p>
+                    </div>
+                </div>
+
+                <!-- Book -->
+                <div class="content-card" data-category="book">
+                    <div class="card-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <span class="category-tag">책</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>그리고 아무도 없었다</h3>
+                        <p class="rating">★★★★★</p>
+                        <p>애거사 크리스티의 고전 추리 소설. 시간이 경과해도 여전히 신선하고 흥미로운 매력이 있는 작품입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">함께하기</h2>
+            <p class="contact-subtitle">콘텐츠에 대한 이야기, 협업 제안, 무엇이든 환영합니다</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:your.email@example.com" class="contact-method">
+                    <div class="contact-icon">✉️</div>
+                    <p>이메일</p>
+                </a>
+                <a href="#" class="contact-method">
+                    <div class="contact-icon">🐙</div>
+                    <p>GitHub</p>
+                </a>
+                <a href="#" class="contact-method">
+                    <div class="contact-icon">💼</div>
+                    <p>LinkedIn</p>
+                </a>
+                <a href="#" class="contact-method">
+                    <div class="contact-icon">🐦</div>
+                    <p>Twitter</p>
+                </a>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="이름" required>
+                <input type="email" placeholder="이메일" required>
+                <textarea placeholder="메시지를 입력하세요" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">메시지 보내기</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jae Jun Chung. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
