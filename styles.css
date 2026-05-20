@@ -358,6 +358,113 @@ body {
 }
 
 /* ======================
+   References Section
+   ====================== */
+.references {
+    padding: 80px 0;
+    background: transparent;
+}
+
+.references-intro {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.ref-grid {
+    display: none;
+}
+
+/* Horizontal reference list */
+.ref-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ref-item {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+}
+
+.ref-image {
+    flex: 1 1 50%;
+    min-height: 360px;
+    background-size: cover;
+    background-position: center;
+    background-color: #111; /* placeholder color for image area */
+    position: relative;
+}
+
+.ref-image::after {
+    /* subtle dark overlay so text on the right remains readable when images are bright */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 100%);
+    pointer-events: none;
+}
+
+.ref-content {
+    flex: 1 1 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ref-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.ref-content p {
+    margin: 0 0 1rem 0;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.keywords {
+    font-size: 0.9rem;
+    color: #FFEB7A;
+    opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+    .ref-item {
+        flex-direction: column;
+    }
+
+    .ref-image, .ref-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .ref-image {
+        min-height: 200px;
+    }
+}
+
+/* Zig-zag: alternate image/text sides */
+.ref-list .ref-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* remove any visible borders or heavy boxes for a clean look */
+.ref-item,
+.ref-image,
+.ref-content {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* ======================
    Contact Section
    ====================== */
 .contact {
